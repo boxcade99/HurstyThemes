@@ -3,7 +3,7 @@
 # This script will install the 3rd party script installer
 # for Hursty's Themes.
 
-# These themes are to be used on a Raspberry Pi / RetroPie build
+# These themes are to be used on a Ubuntu / RetroPie build
 
 # It also includes the Motion Blue Unified ES bootup themes randomizer script
 
@@ -15,16 +15,16 @@ git clone "https://github.com/RetroHursty69/HurstyThemes.git" "/tmp/hursty"
 
 # Move files to proper directory
 
-cp /tmp/hursty/hurstythemes.sh /home/pi/RetroPie/retropiemenu
-chmod 777 /home/pi/RetroPie/retropiemenu/hurstythemes.sh
-cp /tmp/hursty/hurstythemes.png /home/pi/RetroPie/retropiemenu/icons
-if [[ -d "/home/pi/scripts" ]]; then
+cp /tmp/hursty/hurstythemes.sh ~/RetroPie/retropiemenu
+chmod 777 ~/RetroPie/retropiemenu/hurstythemes.sh
+cp /tmp/hursty/hurstythemes.png ~/RetroPie/retropiemenu/icons
+if [[ -d "~/RetroPie/scripts" ]]; then
 echo "exists" > /dev/null
 else
-    mkdir /home/pi/scripts
+    mkdir ~/RetroPie/scripts
 fi
-cp /tmp/hursty/themerandom.sh /home/pi/scripts
-chmod 777 /home/pi/scripts/themerandom.sh
+cp /tmp/hursty/themerandom.sh ~/RetroPie/scripts
+chmod 777 ~/RetroPie/scripts/themerandom.sh
 
 # Update RetroPie gamelist.xml to add new entry
 
